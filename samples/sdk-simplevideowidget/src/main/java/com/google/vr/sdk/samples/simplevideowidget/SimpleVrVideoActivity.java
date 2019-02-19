@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -129,11 +130,21 @@ public class SimpleVrVideoActivity extends Activity {
    * {@link VrVideoView#pauseVideo()} after loading the video.
    */
   private boolean isPaused = false;
+  private Button mVRDone;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_vr);
+
+    mVRDone = (Button) findViewById(R.id.VRDone);
+    mVRDone.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Slider.completed++;
+            startActivity(new Intent(SimpleVrVideoActivity.this,Slider.class));
+        }
+    });
 
     seekBar = (SeekBar) findViewById(R.id.seek_bar);
     seekBar.setOnSeekBarChangeListener(new SeekBarListener());

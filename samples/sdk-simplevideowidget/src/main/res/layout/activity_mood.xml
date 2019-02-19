@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoodActivity">
+    android:background="@drawable/cloudbackground"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Age"
@@ -23,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
         android:layout_marginTop="399dp"
-        android:button="@drawable/angrycopy"
+        android:button="@drawable/angryemoji"
         android:onClick="onRadioButtonClicked" />
         <!--android:text="angry"-->
 
@@ -50,16 +51,6 @@
         android:button="@drawable/happycopy"
         android:onClick="onRadioButtonClicked"/>
         <!--android:text="Happy" -->
-
-
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
-        android:text="Next"/>
 
 
 </RelativeLayout>

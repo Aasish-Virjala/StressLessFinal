@@ -48,5 +48,14 @@
           android:paddingStart="32dp"
           android:paddingEnd="32dp"/>
 
+        <Button
+            android:id="@+id/VRDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="Done"
+            android:textSize="@dimen/caption_text_size" />
     </LinearLayout>
 </ScrollView>

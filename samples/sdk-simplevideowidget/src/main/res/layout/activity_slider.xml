@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cloudbackground"
     tools:context=".Slider">
 
     <TextView
@@ -54,5 +55,15 @@
         android:layout_marginTop="360dp"
         android:text="Slide ---->"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/Instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/Black"
+        android:text="TextView"/>
 
 </RelativeLayout>

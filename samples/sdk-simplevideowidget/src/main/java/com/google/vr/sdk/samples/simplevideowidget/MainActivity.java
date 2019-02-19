@@ -26,20 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
-        Toast.makeText(this, getClass().toString(), Toast.LENGTH_SHORT).show();
-       // startActivity(new Intent(MainActivity.this,OptionsForVr.class));
+        startActivity(new Intent(MainActivity.this,FirstScreen.class));
         age = (TextView) findViewById(R.id.Age);
         zeroEighteen = (RadioButton) findViewById(R.id.zeroEighteen);
         eighteenThirty = (RadioButton) findViewById(R.id.eighteenThirty);
         thiryPlus = (RadioButton) findViewById(R.id.thirtyPlus);
         zeroEighteen.setChecked(false);
-        next = (Button) findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Slider.class));
-            }
-        });
     }
     public void onRadioButtonClicked(View view) {
         switch (view.getId()) {
@@ -49,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 eighteenThirty.setChecked(false);
                 thiryPlus.setChecked(false);
                 zeroEighteen.setChecked(true);
+                startActivity(new Intent(MainActivity.this,Slider.class));
                 break;
 
             case R.id.eighteenThirty:
@@ -57,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 eighteenThirty.setChecked(true);
                 thiryPlus.setChecked(false);
                 zeroEighteen.setChecked(false);
+                startActivity(new Intent(MainActivity.this,Slider.class));
                 break;
             case R.id.thirtyPlus:
                 mood="happy";
@@ -64,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 eighteenThirty.setChecked(false);
                 thiryPlus.setChecked(true);
                 zeroEighteen.setChecked(false);
+                startActivity(new Intent(MainActivity.this,Slider.class));
                 break;
         }
     }
